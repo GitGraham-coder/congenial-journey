@@ -2,7 +2,7 @@
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
-<baseLayout pageTitle={frontmatter.title}>
+<BaseLayout pageTitle={frontmatter.title}>
     <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
     <p><em>{frontmatter.description}</em></p>
     <p>Written by: {frontmatter.author}</p>
@@ -19,7 +19,7 @@ const { frontmatter } = Astro.props;
   </div>
 
     <slot />
-</baseLayout>
+</BaseLayout>
 <style>
   a {
     color: #00539F;
